@@ -1,6 +1,7 @@
 #!/bin/sh
 # Entrypoint for idrive
-#/work/IDriveForLinux/scripts/check_for_update.pl silent
+# running the update command may logout the user
+# /opt/idriveforlinux.bin --update silent
 
 service idrivecron start
 
