@@ -1,5 +1,4 @@
-# idrive
-**IDrive Backup Docker image with v2.37**
+# **IDrive Backup Docker image with v3.2**
 
 IDrive services persist, so no need to relogin after each restart of the container.\
 It also works in TrueNAS SCALE. Configuration example is below.
@@ -16,8 +15,8 @@ services:
     image: ghcr.io/lunksnee/idrive-persist:release
     restart: unless-stopped
     volumes:
-      - config:/work/IDriveForLinux/idriveIt
-      - dependencies:/work/IDriveForLinux/scripts/Idrivelib/dependencies
+      - config:/opt/IDriveForLinux/idriveIt
+      - dependencies:/opt/IDriveForLinux/scripts/Idrivelib/dependencies
       - files:/mnt/files
       - $BACKUPDIR:/mnt/backup:ro
     environment:
@@ -56,6 +55,6 @@ leave everything else on default
 ## Configuration after first start
 Configure your IDrive account after first start.
 * Exec into container
-* Run ````./account_setting.pl````
+* Run ````./idrive -a````
 * Login with your account details and configure other basic settings. Important is your Backup location.
 * Now you should see your container in your IDrive dashboard.
