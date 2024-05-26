@@ -16,7 +16,7 @@ services:
     restart: unless-stopped
     volumes:
       - config:/opt/IDriveForLinux/idriveIt
-      - dependencies:/opt/IDriveForLinux/scripts/Idrivelib/dependencies
+      - dependencies:/opt/IDriveForLinux/bin/Idrivelib/dependencies
       - files:/mnt/files
       - $BACKUPDIR:/mnt/backup:ro
     environment:
