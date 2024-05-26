@@ -56,6 +56,6 @@ leave everything else on default
 ## Configuration after first start
 Configure your IDrive account after first start.
 * Exec into container
-* Run ````./idrive -i````
+* Run ````./idrive -a````
 * Login with your account details and configure other basic settings. Important is your Backup location.
 * Now you should see your container in your IDrive dashboard.
